@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sith Cipher Challenge</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+      color: #00ff00;
+    }
+    #game-container {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border: 2px solid #00ff00;
+      border-radius: 5px;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+      background-color: #000;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      border-radius: 3px;
+    }
+    button:hover {
+      background-color: #00cc00;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <h1>SITH CIPHER CHALLENGE</h1>
+    <p>DECODE: <strong>XLI MWXERX</strong></p>
+    <p>CLUE: Shift each letter back by 2, then reverse the word.</p>
+    <input type="text" id="answer" placeholder="ENTER DECODED WORD">
+    <button onclick="checkAnswer()">SUBMIT</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById('answer').value.toLowerCase();
+      const resultDiv = document.getElementById('result');
+      if (answer === 'rebels') {
+        resultDiv.innerHTML = 'CIPHER SOLVED. PASSWORD: <strong>SITHCODE</strong>';
+        resultDiv.style.color = '#00ff00';
+      } else {
+        resultDiv.innerHTML = 'CIPHER FAILURE. RECOMPUTE.';
+        resultDiv.style.color = '#ff0000';
+      }
+    }
+  </script>
+</body>
+</html>
