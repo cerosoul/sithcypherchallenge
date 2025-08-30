@@ -52,7 +52,7 @@
 <body>
   <div id="game-container">
     <h1>SITH CIPHER CHALLENGE</h1>
-    <p>DECODE: <strong>XLI MWXERX</strong></p>
+    <p>DECODE: <strong>GFKU MTCF</strong></p>
     <p>CLUE: Shift each letter back by 2, then reverse the word.</p>
     <input type="text" id="answer" placeholder="ENTER DECODED WORD">
     <button onclick="checkAnswer()">SUBMIT</button>
@@ -62,7 +62,7 @@
     function checkAnswer() {
       const answer = document.getElementById('answer').value.toLowerCase();
       const resultDiv = document.getElementById('result');
-      if (answer === 'rebels') {
+      if (answer.toLowerCase().trim() === 'dark side') {
         resultDiv.innerHTML = 'CIPHER SOLVED. PASSWORD: <strong>SITHCODE</strong>';
         resultDiv.style.color = '#00ff00';
       } else {
