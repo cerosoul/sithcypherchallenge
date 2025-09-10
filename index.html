@@ -63,7 +63,8 @@
       const answer = document.getElementById('answer').value.toLowerCase();
       const resultDiv = document.getElementById('result');
       if (answer.toLowerCase().trim() === 'dark side') {
-        resultDiv.innerHTML = 'CIPHER SOLVED. PASSWORD: <strong>SITHCODE</strong>';
+        resultDiv.innerHTML = 'CIPHER SOLVED. PASSWORD: <strong>SITHCODE</strong>' +
+          '<br/><br/> Go to the Homestead to continue.';
         resultDiv.style.color = '#00ff00';
       } else {
         resultDiv.innerHTML = 'CIPHER FAILURE. RECOMPUTE.';
